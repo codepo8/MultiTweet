@@ -1,0 +1,4 @@
+MultiTweet is a small demo of how to use YQL insert in PHP.
+
+To use it simple edit the accounts.php file and add the twitter accounts
+and passwords that you want to use. 

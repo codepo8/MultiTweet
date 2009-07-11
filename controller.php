@@ -1,5 +1,17 @@
 <?php 
+/*
+  MultiTweet by Christian Heilmann (controller)
+  Version: 1.0
+  Homepage: http://icant.co.uk/multitweet/
+  Copyright (c) 2009, Christian Heilmann
+  Code licensed under the BSD License:
+  http://wait-till-i.com/license.txt
+*/
 include('accounts.php');
+
+// Location of the open data table to use for twitter updates
+$datatable = 'http://icant.co.uk/multitweet/twitter.status.xml';
+
 $results = array();
 $keys = array_keys($accounts);
 if(isset($_POST['account'])){
@@ -16,8 +28,8 @@ if(isset($_POST['account'])){
     $password = $accounts[$a];
     $ch = curl_init(); 
     $posturl = 'https://query.yahooapis.com/v1/public/yql';
-    $postvars = 'q=use%20\'http%3A%2F%2Fwww.yqlblog.net%2Fsamples%2F'.
-                'twitter.status.xml\'%3B%20insert%20into%20twitter.'.
+    $postvars = 'q=use%20\''.urlencode($datatable).
+                '\'%3B%20insert%20into%20twitter.'.
                 'status%20(status%2Cusername%2Cpassword)%20values%20(%22';
     if(isset($_POST['retweet'])){
       $postvars .= urlencode(str_replace('%account%',$rand,$retweetmask));

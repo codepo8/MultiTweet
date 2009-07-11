@@ -1,4 +1,13 @@
-<?php include('controller.php');?>
+<?php 
+/*
+  MultiTweet by Christian Heilmann (index file)
+  Version: 1.0
+  Homepage: http://icant.co.uk/multitweet/
+  Copyright (c) 2009, Christian Heilmann
+  Code licensed under the BSD License:
+  http://wait-till-i.com/license.txt
+*/
+include('controller.php');?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
