@@ -1,0 +1,91 @@
+html,body{
+  font-family:"arial rounded mt bold","lucida grande",arial,sans-serif;
+  background:#3c3;
+}
+#doc{
+  background:#f8f8f8;
+  border:1em solid #f8f8f8;
+  -moz-border-radius:10px;
+}
+h1{
+  font-size:200%;
+  margin:10px 0;
+}
+  h1 span{
+  color:#060;
+}
+div label{
+  display:block;
+  position:absolute;
+  left:-9999px
+}
+li label,div.inline label{
+  position:relative;
+  left:0;
+  display:inline;
+}
+div.submit{
+  text-align:right;
+}
+form input{
+  margin-right:1em;
+}
+form ul,form li{
+  list-style:none;
+  margin:0;
+}
+form ul{
+  margin:1em 0;
+}
+h2 span{
+  font-size:80%;
+  display:block;
+  color:#999;
+}
+textarea{
+  display:block;
+  width:97%;
+  height:5em;
+  background:#fff;
+  -moz-border-radius:5px;
+  border:2px solid #060;
+  padding:5px;
+  margin:1em 0;
+  font-size:150%;
+}
+.submit input{
+  -moz-border-radius:5px;
+  color:#fff;
+  margin:0;
+  background:#060;
+  border:2px solid #060;
+  font-size:150%;
+}
+
+.submit input:hover{
+  background:#393;
+  border:2px solid #393;
+  cursor:pointer;
+}
+
+#accounts li{
+  padding:.3em 0;
+}
+#accounts li span{
+  padding:.2em;
+  color:#fff;
+  background:#999;
+}
+#accounts li span.error{
+  background:#c00;
+}
+#accounts li span.success{
+  background:#0c0;
+}
+#ft p {
+  margin:3em 0 1em 0;
+  color:#999;
+}
+#ft p a{
+  color:#000;
+}
