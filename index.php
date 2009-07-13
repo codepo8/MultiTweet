@@ -52,7 +52,17 @@ include('controller.php');?>
               }
             ?>
           </ul>
-          <div class="inline"><input type="checkbox" name="retweet" id="retweet"><label for="retweet">Add random account retweet</label></div>
+          <div class="inline"><label for="retweet">Retweet: </label>
+            <select name="retweet" id="retweet">
+              <option value="none" selected="selected">none</option>
+              <option value="random">random</option>
+              <?php
+                foreach(array_keys($accounts) as $a){
+                  echo '<option value="'.$a.'">'.$a.'</option>';
+                }
+              ?>
+            </select>
+          </div>
         </div>
         <div class="yui-u">
           <div><h2>Your twitter message</h2>

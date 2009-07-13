@@ -17,11 +17,15 @@ $keys = array_keys($accounts);
 if(isset($_POST['account'])){
   $sentaccounts = $_POST['account'];
   foreach($sentaccounts as $a){
-    if(isset($_POST['retweet'])){
+    if($_POST['retweet'] == 'random'){
       $rand = $a;
       while($rand == $a){
         $rand = $sentaccounts[rand(0,sizeof($sentaccounts)-1)];
       }  
+    } else {
+      if($_POST['retweet'] != 'none'){
+        $rand = $_POST['retweet'];
+      }
     }
     $x = '';
     $username = $a;
@@ -30,7 +34,7 @@ if(isset($_POST['account'])){
     $postvars = 'q=use%20\''.urlencode($datatable).
                 '\'%3B%20insert%20into%20twitter.'.
                 'status%20(status%2Cusername%2Cpassword)%20values%20(%22';
-    if(isset($_POST['retweet'])){
+    if($_POST['retweet']!='none' && $a != $_POST['retweet']){
       $postvars .= urlencode(str_replace('%account%',$rand,$retweetmask));
     }
     $postvars.= urlencode($_POST['tweet']);
