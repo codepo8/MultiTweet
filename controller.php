@@ -26,7 +26,6 @@ if(isset($_POST['account'])){
     $x = '';
     $username = $a;
     $password = $accounts[$a];
-    $ch = curl_init(); 
     $posturl = 'https://query.yahooapis.com/v1/public/yql';
     $postvars = 'q=use%20\''.urlencode($datatable).
                 '\'%3B%20insert%20into%20twitter.'.
